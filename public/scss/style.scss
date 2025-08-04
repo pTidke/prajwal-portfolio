@@ -1,0 +1,29 @@
+// Style Scss
+@import "main/typography";
+@import "main/modal";
+@import "main/dark";
+@import "main/404";
+@import "main/swicher";
+@import "main/rtl";
+@import "main/style";
+
+html,
+body {
+  overflow: auto;
+  -ms-overflow-style: none;     // IE and Edge
+  scrollbar-width: none;        // Firefox
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;                // Chrome, Safari, Opera
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}

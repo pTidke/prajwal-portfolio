@@ -8,13 +8,21 @@ module.exports = [
       </>
     ),
     imageCredit: (
-      <p >
+      <p>
         Photo by{" "}
-        <a href="https://unsplash.com/@brianwangenheim?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/@brianwangenheim"
+          target="_blank"
+          rel="noreferrer"
+        >
           Brian Wangenheim
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/photos/brown-wooden-signage-on-brown-sand-during-daytime-VRuyoZFXISo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/photos/brown-wooden-signage-on-brown-sand-during-daytime-VRuyoZFXISo"
+          target="_blank"
+          rel="noreferrer"
+        >
           Unsplash
         </a>
       </p>
@@ -24,44 +32,63 @@ module.exports = [
     firstDescriptionText: (
       <>
         <p>
-          This project presents a scalable wildfire risk prediction system for California using satellite fire detections, vegetation indices (NDVI), weather data (ERA5, Meteostat), and land cover maps. Data was integrated using spatial joins and time alignment to build a feature-rich modeling dataset.
-        </p>
-        <p>
-          Machine learning models like Random Forest and CatBoost achieved 71%+ accuracy in classifying fire risk. Neural baselines such as MLP and FT-Transformer were also evaluated. Key predictors included NDVI, wind speed, and seasonal patterns.
+          Spatiotemporal ML pipeline to forecast wildfire-prone zones in
+          California by fusing NDVI, weather, land cover, and satellite fire
+          detections.
         </p>
       </>
     ),
     serviceListDescriptions: (
       <>
-        <h3>Core Contributions</h3>
+        <h3>Description</h3>
         <p>
-          A modular pipeline for wildfire prediction integrating open-source environmental data and interpretable ML models.
+          Wildfires devastate California annually. We designed a scalable ML
+          system that unifies heterogeneous environmental data to produce
+          actionable risk maps for early warning and resource allocation.
+          Forecasting fire risk requires handling multi-source data (NDVI,
+          ERA5/Meteostat weather, land cover, satellite fire detections) and
+          capturing temporal/seasonal dynamics for reliable local risk
+          estimates.
         </p>
-        <div className="in_list">
-          <ul>
-            <li>
-              <p>Spatiotemporal data fusion using GeoPandas, Rasterio, Earth Engine.</p>
-            </li>
-            <li>
-              <p>Modeling with Random Forest, CatBoost, FT-Transformer, MLP.</p>
-            </li>
-            <li>
-              <p>FRP risk classification, feature importance, and spatial cluster analysis.</p>
-            </li>
-            <li>
-              <p>Future-ready design: GNNs for spread, voting ensembles, real-time input.</p>
-            </li>
-          </ul>
-        </div>
-        <p><strong>Technologies Used:</strong> Python, PyTorch, GeoPandas, Google Earth Engine, CatBoost</p>
+
+        <h3>Data & Tools</h3>
         <p>
-          Project GitHub:{" "}
-          <a href="https://github.com/pTidke/BDA602" target="_blank" rel="noreferrer">
-            github.com/pTidke/BDA602
-          </a>
+          Data: NASA FIRMS, ERA5 & Meteostat, NDVI time-series, land cover
+          rasters.
+          <br />
+          Tools: Python, PyTorch, Scikit-learn, GeoPandas, Rasterio, CatBoost,
+          XGBoost, FT-Transformer, ArcGIS.
         </p>
+
+        <h3>Approach</h3>
+        <p>
+          • Raster sampling, temporal alignment, and spatial joins to build a
+          unified feature store (500k+ samples).
+          <br />• Feature engineering: NDVI trends, wind speed, seasonal tags,
+          vegetation stress indicators.
+          <br />• Modeling: Random Forest/CatBoost/XGBoost baselines; MLP and
+          FT-Transformer as neural baselines.
+          <br />• Interpretability: feature importance, cluster analysis;
+          geo-aggregated risk visualization.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          • ~71.67% F1-score with RF/CatBoost on FRP risk classification.
+          <br />• Top predictors: NDVI, wind speed, seasonal patterns.
+          <br />• Localized risk maps (ArcGIS) enabling targeted readiness.
+        </p>
+
+        <h3>Impact</h3>
+        <p>
+          Demonstrates how ML-driven geospatial analytics can support early
+          warning, suppression planning, and community preparedness.
+        </p>
+
+        {/* <h3>Links</h3>
+        <p>GitHub: <a href="https://github.com/pTidke/BDA602" target="_blank" rel="noreferrer">github.com/pTidke/BDA602</a></p> */}
       </>
-    )
+    ),
   },
   {
     id: 2,
@@ -72,13 +99,21 @@ module.exports = [
       </>
     ),
     imageCredit: (
-      <p >
+      <p>
         Photo by{" "}
-        <a href="https://unsplash.com/@dawson2406?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/@dawson2406"
+          target="_blank"
+          rel="noreferrer"
+        >
           Stephen Dawson
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/photos/turned-on-monitoring-screen-qwtCeJ5cLYs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/photos/turned-on-monitoring-screen-qwtCeJ5cLYs"
+          target="_blank"
+          rel="noreferrer"
+        >
           Unsplash
         </a>
       </p>
@@ -88,48 +123,61 @@ module.exports = [
     firstDescriptionText: (
       <>
         <p>
-          Medi-vu is a geospatial data-driven tool that analyzes healthcare accessibility and disease mortality trends across California. It integrates hospital infrastructure, Medi-Cal providers, and disease mortality data to identify underserved regions and inform policy decisions.
-        </p>
-        <p>
-          The project uses Tableau for dashboard visualization and ArcGIS for mapping. Results reveal clear disparities in healthcare infrastructure, especially in rural regions with high disease mortality.
+          Geospatial decision-support that connects healthcare infrastructure
+          with disease burden to expose underserved regions in California.
         </p>
       </>
     ),
     serviceListDescriptions: (
       <>
-        <h3>Core Features</h3>
+        <h3>Description</h3>
         <p>
-          Combines healthcare access metrics with disease patterns to deliver actionable insights for public health planning.
+          <em>Medi-vu</em> helps policymakers visualize where capacity (beds,
+          staff, Medi-Cal providers) trails disease mortality, bringing equity
+          to public health planning. Agencies lacked an integrated dashboard to
+          analyze healthcare deserts—areas with high mortality but low
+          infrastructure. We centralized, standardized, and mapped these data
+          for action.
         </p>
-        <div className="in_list">
-          <ul>
-            <li>
-              <p>Healthcare access scoring using nurse-patient ratios and bed availability.</p>
-            </li>
-            <li>
-              <p>Disease mortality trends mapped across regions (heart disease, cancer, Alzheimer's).</p>
-            </li>
-            <li>
-              <p>Geospatial dashboard built with Tableau and ArcGIS.</p>
-            </li>
-            <li>
-              <p>Actionable recommendations for underserved zones.</p>
-            </li>
-          </ul>
-        </div>
-        <p><strong>Technologies Used:</strong> Tableau, ArcGIS, Python, Excel, Medi-Cal Datasets</p>
+
+        <h3>Data & Tools</h3>
         <p>
-          Project Video:{" "}
-          <a href="https://www.youtube.com/watch?v=your-video-link" target="_blank" rel="noreferrer">
-            YouTube Demo
-          </a>{" "}
-          | Website:{" "}
-          <a href="https://your-project-website.com" target="_blank" rel="noreferrer">
-            medi-vu.io
-          </a>
+          Data: Hospital capacity, Medi-Cal provider networks, cause-specific
+          mortality.
+          <br />
+          Tools: Databricks (PySpark), Python, Tableau, ArcGIS, Excel.
         </p>
+
+        <h3>Approach</h3>
+        <p>
+          • Processed 1M+ records in PySpark; standardized/linked across
+          sources.
+          <br />• Computed access scores by combining provider/beds with
+          population & mortality.
+          <br />• Designed interactive Tableau + ArcGIS dashboards with spatial
+          filters/layers.
+          <br />• Region ranking for prioritization and investment targeting.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          • Identified 5+ high-burden, low-access regions.
+          <br />• Automated ETL dramatically reduced manual prep and refresh
+          time.
+          <br />• Dashboards support real-time slicing by disease, geography,
+          and metrics.
+        </p>
+
+        <h3>Impact</h3>
+        <p>
+          Enables data-driven investments and equitable interventions across
+          rural and urban communities.
+        </p>
+
+        {/* <h3>Links</h3>
+        <p>Website: <a href="https://your-project-website.com" target="_blank" rel="noreferrer">medi-vu.io</a> | Video: <a href="https://www.youtube.com/watch?v=your-video-link" target="_blank" rel="noreferrer">YouTube Demo</a></p> */}
       </>
-    )
+    ),
   },
   {
     id: 3,
@@ -140,13 +188,21 @@ module.exports = [
       </>
     ),
     imageCredit: (
-      <p >
+      <p>
         Photo by{" "}
-        <a href="https://unsplash.com/@dieselson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/@dieselson"
+          target="_blank"
+          rel="noreferrer"
+        >
           son diesel
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/photos/white-and-green-car-toy-nTK8mi81K7U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/photos/white-and-green-car-toy-nTK8mi81K7U"
+          target="_blank"
+          rel="noreferrer"
+        >
           Unsplash
         </a>
       </p>
@@ -156,41 +212,58 @@ module.exports = [
     firstDescriptionText: (
       <>
         <p>
-          TrafficSensAI is a machine learning system for predicting accident severity and identifying traffic hotspots using historical collision data. It uses DBSCAN clustering to reveal high-risk zones and Random Forest models to classify accident severity across California and U.S. cities.
-        </p>
-        <p>
-          The tool offers granular risk ratings and supports urban planning, enforcement, and awareness by leveraging accident trends, time-of-day factors, and environmental conditions.
+          Full-stack ML + geospatial platform that clusters accident hotspots
+          and predicts severity to inform proactive road-safety planning.
         </p>
       </>
     ),
     serviceListDescriptions: (
       <>
-        <h3>Core Capabilities</h3>
+        <h3>Description</h3>
         <p>
-          ML-powered framework for traffic safety analysis and hotspot prediction using open datasets and spatial clustering.
+          TrafficSensAI anticipates where and how severely accidents may occur,
+          enabling targeted interventions before incidents happen.
+          Municipalities relied on historical reports, not forecasts. We built a
+          predictive system with interactive geovisualization for planners and
+          safety teams.
         </p>
-        <div className="in_list">
-          <ul>
-            <li>
-              <p>DBSCAN clustering for accident-prone zone detection.</p>
-            </li>
-            <li>
-              <p>Random Forest model to predict accident severity from contextual features.</p>
-            </li>
-            <li>
-              <p>Time-of-day, weather, and infrastructure-based feature engineering.</p>
-            </li>
-            <li>
-              <p>Interactive geospatial visualizations and risk heatmaps.</p>
-            </li>
-          </ul>
-        </div>
-        <p><strong>Technologies Used:</strong> Python, Pandas, Scikit-learn, ArcGIS, DBSCAN</p>
+
+        <h3>Data & Tools</h3>
         <p>
-          Demo available upon request — interactive dashboard in development.
+          Data: 10k+ historical accident records, weather, time-of-day,
+          infrastructure.
+          <br />
+          Tools: Python, Pandas, Scikit-learn, DBSCAN, Random Forest, ArcGIS,
+          React.js, Flask.
         </p>
+
+        <h3>Approach</h3>
+        <p>
+          • DBSCAN clustering to identify persistent hotspot corridors.
+          <br />• Random Forest severity model with contextual feature
+          engineering.
+          <br />• ArcGIS heatmaps and filters for spatial exploration.
+          <br />• React.js frontend + Flask APIs with sub-500ms responses.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          • ~82% accuracy on severity classification.
+          <br />• Clustered hotspots into actionable zones for enforcement &
+          design.
+          <br />• Interactive UI for “what-if” and corridor-level analysis.
+        </p>
+
+        <h3>Impact</h3>
+        <p>
+          Supports data-driven safety campaigns, infrastructure changes, and
+          prioritization of limited resources.
+        </p>
+
+        {/* <h3>Links</h3>
+        <p>GitHub: <a href="https://github.com/pTidke/TrafficSensAI" target="_blank" rel="noreferrer">github.com/pTidke/TrafficSensAI</a></p> */}
       </>
-    )
+    ),
   },
   {
     id: 4,
@@ -201,13 +274,21 @@ module.exports = [
       </>
     ),
     imageCredit: (
-      <p >
+      <p>
         Photo by{" "}
-        <a href="https://unsplash.com/@jakobowens1?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/@jakobowens1"
+          target="_blank"
+          rel="noreferrer"
+        >
           Jakob Owens
         </a>{" "}
         on{" "}
-        <a href="https://unsplash.com/photos/orange-and-blue-round-light-dGXGDairmK0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noreferrer">
+        <a
+          href="https://unsplash.com/photos/orange-and-blue-round-light-dGXGDairmK0"
+          target="_blank"
+          rel="noreferrer"
+        >
           Unsplash
         </a>
       </p>
@@ -217,43 +298,54 @@ module.exports = [
     firstDescriptionText: (
       <>
         <p>
-          This project explores deep learning and GAN-based augmentation for anomaly detection in tabular data. It benchmarks MLP, LSTM, and a custom BERT-style Transformer against classical models like OC-SVM and Deep SVDD.
-        </p>
-        <p>
-          A class-conditional WGAN-GP with diversity and feature matching loss was used to generate synthetic anomalies, significantly improving model performance—especially under severe class imbalance.
+          Research study on whether WGAN-GP augmentation can improve anomaly
+          detection in imbalanced tabular datasets and remain interpretable.
         </p>
       </>
     ),
     serviceListDescriptions: (
       <>
-        <h3>Key Highlights</h3>
+        <h3>Description</h3>
         <p>
-          A unified deep learning + generative modeling framework for robust anomaly detection in structured data.
+          Anomalies are rare and hard to learn from. We evaluated
+          class-conditional WGAN-GP to synthesize minority samples and bolster
+          downstream detectors. Classical detectors (OC-SVM, Deep SVDD) degrade
+          under severe imbalance. Could GAN-based augmentation improve accuracy
+          and robustness across models?
         </p>
-        <div className="in_list">
-          <ul>
-            <li>
-              <p>Custom Transformer model with value-aware token scaling for tabular inputs.</p>
-            </li>
-            <li>
-              <p>WGAN-GP for class-conditional anomaly generation using 3 loss functions.</p>
-            </li>
-            <li>
-              <p>Up to 20–30% performance improvement on benchmark datasets.</p>
-            </li>
-            <li>
-              <p>OC-SVM, MLP, and LSTM benefited most from synthetic balancing.</p>
-            </li>
-          </ul>
-        </div>
-        <p><strong>Technologies Used:</strong> PyTorch, Scikit-learn, WGAN-GP, TabTransformer, OC-SVM</p>
+
+        <h3>Data & Tools</h3>
         <p>
-          Code Repository:{" "}
-          <a href="https://github.com/pTidke/BDA602" target="_blank" rel="noreferrer">
-            github.com/pTidke/BDA602
-          </a>
+          Data: Sparse tabular biological datasets.
+          <br />
+          Tools: PyTorch, Scikit-learn, WGAN-GP, TabTransformer, Autoencoders,
+          OC-SVM, Deep SVDD.
         </p>
+
+        <h3>Approach</h3>
+        <p>
+          • Class-conditional WGAN-GP with diversity & feature-matching losses.
+          <br />• Benchmarks: OC-SVM/Deep SVDD vs. MLP, LSTM, TabTransformer.
+          <br />• Attention/feature attributions for interpretability and QA.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          • 20–30% improvement in detection under severe imbalance.
+          <br />• Largest gains for classical baselines with GAN-augmented
+          training.
+          <br />• Interpretability supports domain review and trust.
+        </p>
+
+        <h3>Impact</h3>
+        <p>
+          Extends anomaly detection to low-prevalence domains (healthcare,
+          finance, security) where labeled anomalies are scarce.
+        </p>
+
+        {/* <h3>Links</h3>
+        <p>GitHub: <a href="https://github.com/pTidke/BDA602" target="_blank" rel="noreferrer">github.com/pTidke/BDA602</a></p> */}
       </>
-    )
-  }
+    ),
+  },
 ];

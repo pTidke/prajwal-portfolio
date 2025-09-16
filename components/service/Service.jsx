@@ -34,7 +34,7 @@ const Service = () => {
 
   return (
     <div className="service_list">
-      <ul>
+      <ul className="grid-wrapper">
         {servicesData.map((item) => (
           <li data-aos="fade-right" data-aos-duration="1200" key={item.id}>
             <Tilt>

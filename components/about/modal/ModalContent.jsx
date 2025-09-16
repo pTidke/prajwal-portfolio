@@ -13,7 +13,8 @@ const ModalContent = () => {
     <>
       <div className="row resume-box">
         <div className="col-12 achievements-wrapper">
-          {/* <h3>Achievements</h3> */}
+          <a>&#8203;</a>
+          <h4>Skills</h4>
           <ETLTechnologies />
           <CloudTechnologies />
           <MLTechnologies />

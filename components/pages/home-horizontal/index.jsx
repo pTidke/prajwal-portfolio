@@ -12,7 +12,8 @@ import Contact from "../../Contact";
 import Address from "../../Address";
 import Map from "../../Map";
 import HeaderMobile from "../../header/HeaderMobile";
-import CircularGallery from '../../portfolio/Gallary';
+import CircularGallery from "../../portfolio/Gallary";
+import Experience from "../../Experience/Experience";
 
 const EdinaHorizontal = () => {
   const [isDark, setIsDark] = useState(false);
@@ -78,13 +79,16 @@ const EdinaHorizontal = () => {
       <div className="edina_tm_services" id="project">
         <div className="container">
           <div className="edina_tm_title">
-            <h3>Academic Projects</h3>
-            {/* <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              ipsum sit nibh amet egestas tellus.
-            </p> */}
+            <h3>Professional Experience</h3>
           </div>
-          {/* End edian_tm_title */}
+          <Experience />
+        </div>
+      </div>
+      <div className="edina_tm_services" id="project">
+        <div className="container">
+          <div className="edina_tm_title">
+            <h3>Academic Projects</h3>
+          </div>
           <Service />
         </div>
       </div>
@@ -95,7 +99,9 @@ const EdinaHorizontal = () => {
           <div className="edina_tm_title">
             <h3>Photography</h3>
             <p>
-              Beyond code and data, photography is how I slow down and notice the world. I capture stories through light, shadow, and fleeting moments—whether it&apos;s urban stillness or nature in motion.
+              Beyond code and data, photography is how I slow down and notice
+              the world. I capture stories through light, shadow, and fleeting
+              moments—whether it&apos;s urban stillness or nature in motion.
             </p>
           </div>
           {/* End edian_tm_title */}
@@ -145,7 +151,6 @@ const EdinaHorizontal = () => {
             <Address />
           </div>
           {/* End Address Info */}
-          
         </div>
       </div>
       {/* /CONTACT */}

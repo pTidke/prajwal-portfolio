@@ -1,7 +1,7 @@
 import technologies from "../../data/technologies";
 
 const SkillBox = ({ title, items }) => (
-  <div className="box-stats with-margin">
+  <div className="box-stats">
     <h6 className="">{title}</h6>
     <div className="coursework-grid">
       {items.map((tech, idx) => (

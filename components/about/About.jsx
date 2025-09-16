@@ -115,14 +115,14 @@ const About = () => {
                 paddingRight: isMobile ? 0 : "2.2rem",
               }}
             >
-              <button
+              {/* <button
                 type="button"
                 className="color edina_tm_button"
                 style={{ flex: 1 }}
                 onClick={toggleModalOne}
               >
                 Experience
-              </button>
+              </button> */}
 
               <button
                 type="button"
@@ -148,7 +148,7 @@ const About = () => {
               <div
                 className="main"
                 style={{
-                  backgroundImage: "url(img/about/pic3.jpeg)",
+                  backgroundImage: "url(img/about/pic2.png)",
                 }}
                 data-aos="fade-left"
                 data-aos-duration="1200"

@@ -203,7 +203,7 @@ const Hero = () => {
           <div className="chat-modal-overlay" onClick={() => setIsOpen(false)}>
             <div className="chat-modal" onClick={(e) => e.stopPropagation()}>
               <div className="chat-header">
-                <h4>ShadowClone AI</h4>
+                <h5>ShadowClone AI</h5>
                 <div
                   style={{ display: "flex", gap: "10px", alignItems: "center" }}
                 >
@@ -213,7 +213,7 @@ const Hero = () => {
                       background: "transparent",
                       border: "none",
                       color: "white",
-                      fontSize: "0.9rem",
+                      fontSize: "0.85rem",
                       cursor: "pointer",
                     }}
                   >

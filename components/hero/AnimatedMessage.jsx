@@ -50,20 +50,36 @@ export default function AnimatedMessage({ text = "", role, isNew = false }) {
       .replace(/undefined/gi, "")
       .trim();
 
+    // markdown bold/italic
     clean = clean
       .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-      .replace(/\*(.*?)\*/g, "<em>$1</em>")
-      .replace(/^- (.*$)/gm, "• $1")
-      .replace(/\n•/g, "<br/>•")
-      .replace(/\n/g, "<br/>");
+      .replace(/\*(.*?)\*/g, "<em>$1</em>");
 
-    // convert plain URLs
+    // numbered lists → wrap in a real ordered list
+    clean = clean.replace(/(^|\n)(\d+\..*(\n\d+\..*)*)/g, (match) => {
+      const items = match
+        .trim()
+        .split(/\n/)
+        .map((line) => line.replace(/^\d+\.\s*/, "").trim())
+        .map((text) => `<li>${text}</li>`)
+        .join("");
+      return `<ol class="numbered-list">${items}</ol>`;
+    });
+
+    // bullet lists
+    clean = clean.replace(
+      /^- (.*)$/gm,
+      '<div class="list-item bullet">• $1</div>'
+    );
+
+    // newlines → spacing
+    clean = clean.replace(/\n{2,}/g, "<br/><br/>").replace(/\n/g, "<br/>");
+
+    // hyperlinks
     clean = clean.replace(
       /(https?:\/\/[^\s]+)/g,
       '<a href="$1" target="_blank" rel="noopener noreferrer" class="chat-link">$1</a>'
     );
-
-    // convert markdown links [text](url)
     clean = clean.replace(
       /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g,
       '<a href="$2" target="_blank" rel="noopener noreferrer" class="chat-link">$1</a>'

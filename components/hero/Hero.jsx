@@ -3,30 +3,37 @@ import Social from "../Social";
 import ReactTyped from "react-typed";
 import Image from "next/image";
 import heroImage from "../../public/img/hero/pic.png";
-import AnimatedMessage from "./AnimatedMessage"; // adjust path
+import AnimatedMessage from "./AnimatedMessage";
 
 // 👉 UPDATE this to your deployed backend URL
 const API_BASE = "http://127.0.0.1:8000";
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
 
-  // inside your Hero component:
+  // ✅ Load messages + thread ID from localStorage
   const [messages, setMessages] = useState(() => {
     if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("chat_history");
-      return saved
-        ? JSON.parse(saved).map((m) => ({ ...m, isNew: false }))
-        : [];
+      const savedMessages = localStorage.getItem("chat_history");
+      const savedThread = localStorage.getItem("thread_id");
+      if (savedMessages) {
+        return JSON.parse(savedMessages).map((m) => ({ ...m, isNew: false }));
+      }
     }
     return [];
   });
 
-  // 🧩 Whenever messages change → persist them
+  const [threadId, setThreadId] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("thread_id") || null;
+    }
+    return null;
+  });
+
+  // 🧩 Persist messages and thread ID
   useEffect(() => {
     if (messages.length > 0) {
       localStorage.setItem(
@@ -36,36 +43,67 @@ const Hero = () => {
     }
   }, [messages]);
 
-  // Optional: clear chat function
+  useEffect(() => {
+    if (threadId) {
+      localStorage.setItem("thread_id", threadId);
+    }
+  }, [threadId]);
+
+  // 🧹 Clear chat + reset memory
   const clearChat = () => {
-    setMessages([]);
+    setMessages([
+      {
+        role: "bot",
+        text: "👋 Hello! I’m ShadowClone AI, Prajwal’s virtual assistant. You can ask me anything about his background, experience, projects, skills, or interests.",
+        isNew: false,
+      },
+    ]);
+    setThreadId(null);
     localStorage.removeItem("chat_history");
+    localStorage.removeItem("thread_id");
   };
 
-  // Auto-scroll when messages or loading change
+  // 🧭 Auto-scroll
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
+  // 👋 Initial greeting when chat opens for the first time
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      const greeting = {
+        role: "bot",
+        text: "👋 Hello! I’m ShadowClone AI, Prajwal’s virtual assistant. You can ask me anything about his background, experience, projects, skills, or interests.",
+        isNew: false,
+      };
+      setMessages([greeting]);
+    }
+  }, [isOpen]);
+
+  // ✉️ Send Message (with persistent memory)
   const sendMessage = async () => {
     if (!input.trim()) return;
+
     const userMsg = { role: "user", text: input };
-    setMessages([...messages, userMsg]);
+    setMessages((msgs) => [...msgs, userMsg]);
     setInput("");
     setLoading(true);
+
     try {
       const res = await fetch(`${API_BASE}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: input }),
+        body: JSON.stringify({ question: input, thread_id: threadId }), // ✅ send existing thread ID
       });
-      const data = await res.json();
-      let botText = data?.answer || "";
-      botText = String(botText)
-        .replace(/undefined/gi, "")
-        .trim();
 
-      botText = botText.replace(/undefined/g, "").trim();
+      const data = await res.json();
+      const botText = (data?.answer || "").replace(/undefined/gi, "").trim();
+
+      // ✅ Save thread_id if backend returns one (new conversation)
+      if (data?.thread_id && data.thread_id !== threadId) {
+        setThreadId(data.thread_id);
+        localStorage.setItem("thread_id", data.thread_id);
+      }
 
       setMessages((msgs) => [
         ...msgs,
@@ -84,6 +122,7 @@ const Hero = () => {
   return (
     <div className="edina_tm_hero" id="home">
       <div className="content">
+        {/* Hero Section */}
         <div className="img-shape" data-aos="fade-up" data-aos-duration="1200">
           <Image src={heroImage} alt="brand" />
         </div>
@@ -136,14 +175,8 @@ const Hero = () => {
             <Social />
           </div>
         </div>
-        {/* ✨ Glowing Chat Button */}
-        <div
-          style={{
-            marginTop: "1.2rem",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        ></div>
+
+        {/* ✨ Buttons */}
         <div
           className="edina_tm_button"
           data-aos="fade-up"
@@ -165,7 +198,7 @@ const Hero = () => {
           <span>Ask AI about Prajwal</span>
         </button>
 
-        {/* 🪟 Modal */}
+        {/* 🪟 Modal Chat */}
         {isOpen && (
           <div className="chat-modal-overlay" onClick={() => setIsOpen(false)}>
             <div className="chat-modal" onClick={(e) => e.stopPropagation()}>

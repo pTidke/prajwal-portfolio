@@ -419,38 +419,38 @@ body.dark .loader_line:after {
   transition: all 0.2s ease;
 }
 
-.list-item {
-  margin-left: 1rem;
-  margin-top: 4px;
-  line-height: 1.5;
-}
+// .list-item {
+//   margin-left: 1rem;
+//   margin-top: 4px;
+//   line-height: 1.5;
+// }
 
-.numbered-list,
-ul {
-  margin-left: 1.5rem;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  line-height: 1.6;
-}
+// .numbered-list,
+// ul {
+//   margin-left: 1.5rem;
+//   margin-top: 4px;
+//   margin-bottom: 4px;
+//   line-height: 1.6;
+// }
 
-.numbered-list li {
-  margin-bottom: 6px;
-}
+// .numbered-list li {
+//   margin-bottom: 6px;
+// }
 
-ul li {
-  list-style-type: disc;
-}
+// ul li {
+//   list-style-type: disc;
+// }
 
-.list-item.numbered::before {
-  counter-increment: list;
-  content: counter(list) ". ";
-  font-weight: 600;
-  color: #1e3a8a;
-}
+// .list-item.numbered::before {
+//   counter-increment: list;
+//   content: counter(list) ". ";
+//   font-weight: 600;
+//   color: #1e3a8a;
+// }
 
-.list-item.bullet {
-  margin-left: 1.2rem;
-}
+// .list-item.bullet {
+//   margin-left: 1.2rem;
+// }
 
 @media (max-width: 600px) {
   .chat-modal {

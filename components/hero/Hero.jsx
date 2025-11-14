@@ -6,7 +6,8 @@ import heroImage from "../../public/img/hero/pic.png";
 import AnimatedMessage from "./AnimatedMessage";
 
 // 👉 UPDATE this to your deployed backend URL
-const API_BASE = "http://127.0.0.1:8000";
+// const API_BASE = "http://127.0.0.1:8000";
+const API_BASE ="https://portfolio-backend-l8ty.onrender.com"
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);

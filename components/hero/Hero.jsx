@@ -183,7 +183,7 @@ const Hero = () => {
           data-aos-duration="1200"
           data-aos-delay="500"
         >
-          <a href="/img/Prajwal_Resume.pdf" download className="color">
+          <a href="/img/Prajwal_Resume_DS.pdf" download className="color">
             Download CV
           </a>
         </div>

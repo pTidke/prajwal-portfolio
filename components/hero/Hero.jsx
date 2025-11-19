@@ -4,6 +4,7 @@ import ReactTyped from "react-typed";
 import Image from "next/image";
 import heroImage from "../../public/img/hero/pic.png";
 import AnimatedMessage from "./AnimatedMessage";
+import TextareaAutosize from "react-textarea-autosize";
 
 // 👉 UPDATE this to your deployed backend URL
 // const API_BASE = "http://127.0.0.1:8000";
@@ -24,6 +25,14 @@ const Hero = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
+  const inputRef = useRef(null); // 👈 new ref
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      // Give browser a moment to render modal before focusing
+      setTimeout(() => inputRef.current.focus(), 150);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     // wake backend when the page first loads
@@ -48,6 +57,42 @@ const Hero = () => {
     }
     return null;
   });
+
+  const scrollYRef = useRef(0);
+
+  // 🔒 Lock background scroll when modal is open (works on iOS + desktop)
+  useEffect(() => {
+    if (!isOpen) {
+      // restore
+      const y = scrollYRef.current || 0;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      window.scrollTo(0, y);
+      return;
+    }
+
+    // lock
+    scrollYRef.current = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollYRef.current}px`;
+    document.body.style.width = "100%";
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    // cleanup just in case
+    return () => {
+      const y = scrollYRef.current || 0;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      window.scrollTo(0, y);
+    };
+  }, [isOpen]);
 
   // 🧩 Persist messages and thread ID
   useEffect(() => {
@@ -289,12 +334,22 @@ const Hero = () => {
               </div>
 
               <div className="chat-input">
-                <input
+                <TextareaAutosize
+                  ref={inputRef} // 👈 add this
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-                  placeholder="Ask me about my work..."
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      sendMessage();
+                    }
+                  }}
+                  placeholder="Ask me about Prajwal..."
+                  minRows={1}
+                  maxRows={6}
+                  className="chat-textarea"
                 />
+
                 <button onClick={sendMessage} disabled={loading}>
                   Send
                 </button>

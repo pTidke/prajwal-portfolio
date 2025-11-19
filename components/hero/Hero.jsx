@@ -7,13 +7,28 @@ import AnimatedMessage from "./AnimatedMessage";
 
 // 👉 UPDATE this to your deployed backend URL
 // const API_BASE = "http://127.0.0.1:8000";
-const API_BASE ="https://portfolio-backend-l8ty.onrender.com"
+const API_BASE = "https://portfolio-backend-l8ty.onrender.com";
+
+// Simple ping function to warm up backend
+const wakeBackend = async () => {
+  try {
+    await fetch(`${API_BASE}/ping`, { method: "GET", cache: "no-cache" });
+    console.log("✅ Backend wake-up ping sent");
+  } catch (err) {
+    console.warn("⚠️ Wake-up ping failed:", err);
+  }
+};
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    // wake backend when the page first loads
+    wakeBackend();
+  }, []);
 
   // ✅ Load messages + thread ID from localStorage
   const [messages, setMessages] = useState(() => {
@@ -90,17 +105,30 @@ const Hero = () => {
     setInput("");
     setLoading(true);
 
+    // 👇 Start wake-up timer
+    const wakeMessageTimeout = setTimeout(() => {
+      setMessages((msgs) => [
+        ...msgs,
+        {
+          role: "bot",
+          text: "⏳ ShadowClone AI is waking up... please wait a few seconds.",
+          isNew: false,
+        },
+      ]);
+    }, 7000); // show if backend takes >7 seconds
+
     try {
       const res = await fetch(`${API_BASE}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: input, thread_id: threadId }), // ✅ send existing thread ID
+        body: JSON.stringify({ question: input, thread_id: threadId }),
       });
+
+      clearTimeout(wakeMessageTimeout);
 
       const data = await res.json();
       const botText = (data?.answer || "").replace(/undefined/gi, "").trim();
 
-      // ✅ Save thread_id if backend returns one (new conversation)
       if (data?.thread_id && data.thread_id !== threadId) {
         setThreadId(data.thread_id);
         localStorage.setItem("thread_id", data.thread_id);
@@ -111,9 +139,14 @@ const Hero = () => {
         { role: "bot", text: botText, isNew: true },
       ]);
     } catch (e) {
+      clearTimeout(wakeMessageTimeout);
       setMessages((msgs) => [
         ...msgs,
-        { role: "bot", text: "⚠️  Error connecting to server.", isNew: true },
+        {
+          role: "bot",
+          text: "⚠️  Error connecting to ShadowClone AI. Please try again shortly.",
+          isNew: false,
+        },
       ]);
     } finally {
       setLoading(false);

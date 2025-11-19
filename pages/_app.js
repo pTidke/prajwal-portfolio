@@ -7,7 +7,6 @@ import "../styles/index.scss";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "../styles/Gallary.scss"; 
-import "../components/hero/ElectricBorder.css";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,

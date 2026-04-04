@@ -5,7 +5,7 @@ const Seo = ({ pageTitle, font }) => (
     <Head>
       <title>
         {pageTitle &&
-          `${pageTitle} || Prajwal Tidke - Personal Portfolio}`}
+            `${pageTitle} || Prajwal Tidke - Personal Portfolio`}
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta

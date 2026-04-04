@@ -6,7 +6,7 @@ module.exports = [
   { meta: "Open to Work", metaInfo: "Yes" },
   { meta: "Address", metaInfo: "San Diego" },
   { meta: "phone", metaInfo: "+16195209475" },
-  { meta: "Email", metaInfo: "ms.ptidke@mail.com" },
+  { meta: "Email", metaInfo: "ms.ptidke@gmail.com" },
   { meta: "Skype", metaInfo: " rokers.nelson" },
-  { meta: "langages", metaInfo: "English, Hindi" },
+  { meta: "languages", metaInfo: "English, Hindi" },
 ];

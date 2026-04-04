@@ -35,35 +35,23 @@ module.exports = [
           uncertainty/interpretability, and reproducibility.
         </p>
 
-        <h5>Mental Health Chatbot (Research Landscape)</h5>
+        <h5>SDSU Research (KALM / KBLaM)</h5>
         <p style={{ textAlign: "justify" }}>
-          Fine-tuned <strong>LLaMA</strong> with <strong>KBLaM</strong> to
-          ground conversations in psychological knowledge; designed domain
-          prompts and scenario banks for controlled evaluation.
+          Architected <strong>KALM</strong>, a RAG-based mental health chatbot
+          for construction workers using FastAPI, GPT-4, and ChromaDB —
+          engineering a 5-stage <strong>ALGEE therapeutic framework</strong>,
+          real-time crisis detection (<strong>53 signal patterns</strong>), 4 AI
+          personas, and AES-128 encrypted storage across 1,000+ clinical
+          knowledge chunks.
           <br />
-          Built a <strong>multilingual, privacy-aware prototype</strong>{" "}
-          tailored to low-resource mobile environments (construction context),
-          with attention to safety policies and guardrails.
+          Implemented <strong>KBLaM architecture</strong> — constructed 10K+
+          domain-specific knowledge-base triples, built QA evaluation datasets,
+          and fine-tuned <strong>LLaMA</strong>, achieving 12% improvement in
+          domain-specific accuracy.
           <br />
-          Defined qualitative/quantitative rubrics for{" "}
-          <strong>empathy, contextual relevance, and safety</strong>; created
-          experiment logs and ablation plans to isolate KB effects.
-        </p>
-
-        <h5>Core Temperature Prediction from Biosignals</h5>
-        <p style={{ textAlign: "justify" }}>
-          Trained <strong>MLP, LSTM, LagMLP (temporal attention)</strong> over
-          PPG/ECG/EDA; engineered temporal windows, normalization schemes, and
-          signal quality filters.
-          <br />
-          Achieved ~<strong>25% MAE reduction</strong> vs. baselines; applied{" "}
-          <strong>WGAN-based augmentation</strong> and{" "}
-          <strong>Monte Carlo Dropout</strong> to quantify uncertainty and
-          improve robustness.
-          <br />
-          Evaluated generalization via{" "}
-          <strong>Leave-One-Subject-Out (LOSO-CV)</strong>; surfaced
-          fairness/domain shift issues and documented mitigation directions.
+          Engineered <strong>WGAN-based synthetic data pipeline</strong> for
+          biosignal analysis, generating 50K+ samples and reducing core-temperature
+          prediction MAE by 15% over baseline.
         </p>
 
         <h5>Impact</h5>
@@ -73,9 +61,6 @@ module.exports = [
           <br />
           Demonstrates feasible <strong>biosignal-driven ML</strong> for safety
           monitoring with explicit uncertainty estimates.
-          <br />
-          Establishes reproducible pipelines and documentation for future
-          clinical/industrial collaboration.
         </p>
       </>
     ),
@@ -117,36 +102,26 @@ module.exports = [
           faster insights across research streams.
         </p>
 
-        <h5>Data Ingestion & ETL</h5>
+        <h5>Analytics Pod (Client: CPPIB, $550B+ AUM)</h5>
         <p style={{ textAlign: "justify" }}>
-          Integrated vendor feeds: <strong>Placer.ai</strong>{" "}
-          (mobility/foot-traffic), <strong>Sensor Tower</strong> &amp;{" "}
-          <strong>Similarweb</strong> (app performance),{" "}
-          <strong>S&amp;P Global</strong>, <strong>Visible Alpha</strong>,{" "}
-          <strong>Earnest Analytics</strong> (financial/transactional).
+          Embedded with <strong>Canada Pension Plan Investment Board</strong> as
+          part of a 2-person analytics pod, owning the full data engineering
+          stack — from relational schema design in <strong>Databricks</strong>{" "}
+          to executive reported dashboards for senior portfolio managers.
           <br />
-          Built <strong>metadata-driven ingestion</strong> with schema
-          harmonization, dynamic source onboarding, and reusable transformation
-          modules in <strong>Databricks (PySpark)</strong>.<br />
-          Orchestrated dependencies and SLAs with{" "}
-          <strong>Apache Airflow</strong>; implemented{" "}
-          <strong>AWS SQS/SNS/S3</strong> event triggers, retries, and alerting
-          for reliability.
-        </p>
-
-        <h5>Automation & Optimization</h5>
-        <p style={{ textAlign: "justify" }}>
-          Automated recurring analyst workflows using{" "}
-          <strong>Python, Excel/VBA, Power Automate</strong>, cutting manual
-          effort by ~<strong>70%</strong> and removing key-person risk.
+          Re-architected ingestion with <strong>AWS SQS/SNS</strong> into S3/PySpark
+          across <strong>1 TB+ daily data</strong>, delivering 20% faster
+          ingestion, 40% lower latency, and 15% higher reporting throughput.
           <br />
-          Reduced ingestion latency by ~<strong>50%</strong> through optimized
-          partitioning, checkpointing, and backfill strategies; added lineage
-          and monitoring hooks for traceability.
+          Built <strong>VBA automation plugin</strong> integrating S&P Global
+          and Visible Alpha data feeds into Excel financial models, pushing
+          cleaned outputs to the Valsys database for KPI dashboard refresh —
+          reclaiming <strong>25 hrs/week</strong> and reducing manual errors by
+          70%.
           <br />
           Standardized <strong>validation rules</strong> (row-counts, schema
-          drift, freshness) to enforce quality across feeds; documented runbooks
-          and escalation paths.
+          drift, freshness) and enforced data SLAs across 3+ client workstreams,
+          achieving <strong>zero reporting deadline misses</strong>.
         </p>
 
         <h5>Client Engagement & Governance</h5>
@@ -212,33 +187,25 @@ module.exports = [
           through cloud-native solutions.
         </p>
 
-        <h5>Global Data Warehouse</h5>
+        <h5>Enterprise Data Engineering (Client: Carrier Global)</h5>
         <p style={{ textAlign: "justify" }}>
-          Developed centralized ETL in <strong>SAP BODS</strong> across{" "}
-          <strong>SAP ECC</strong>, <strong>HANA</strong>,{" "}
-          <strong>Oracle</strong>, <strong>SQL Server</strong>, and flat files;
-          implemented robust error-handling and restartability.
+          Led a 3-person data engineering pod delivering enterprise-scale data
+          solutions across <strong>6+ clients including Carrier Global</strong>.
+          Responsible for full delivery lifecycle — sprint planning, code
+          reviews, client QBRs, and governance audits.
           <br />
-          Administered BODS (repositories, job servers, patching, access
-          control); enforced governance and audit readiness across environments.
+          Spearheaded migration of legacy SAP workflows to{" "}
+          <strong>AWS Glue</strong> with <strong>Oracle-to-Snowflake</strong>{" "}
+          transfers, cutting infrastructure + licensing costs by ~
+          <strong>50%</strong>.
           <br />
-          Supported <strong>Snowflake</strong> consumers by resolving incidents,
-          triaging ad-hoc requests, and tuning queries; validated flows with{" "}
-          <strong>SAP IDT/WEBI</strong> reports.
-        </p>
-
-        <h5>Raise to Cloud Modernization</h5>
-        <p style={{ textAlign: "justify" }}>
-          Converted <strong>SAP BODS → AWS Glue (PySpark)</strong> with modular
-          workflow logic, better partitioning, and CI-friendly structures.
+          Optimized <strong>SAP BODS ETL pipelines</strong> integrating ECC,
+          HANA, SQL Server, and Oracle, compressing reporting from days to
+          hours (<strong>80% faster execution</strong>).
           <br />
-          Engineered <strong>Oracle → Snowflake</strong> migration via SAP
-          Workbench; replaced brittle FTP jobs with <strong>AWS S3</strong>{" "}
-          event-driven ingestion.
-          <br />
-          Delivered ~<strong>50%</strong> projected cost savings and ~
-          <strong>80%</strong> faster reporting through cloud-native patterns
-          and optimized storage/compute.
+          Automated 5+ recurring data-mapping workflows, reclaiming{" "}
+          <strong>1.5 FTEs annually</strong> and maintaining continuous audit
+          readiness under enterprise governance frameworks.
         </p>
 
         <h5>Leadership & Governance</h5>

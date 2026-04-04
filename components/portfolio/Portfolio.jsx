@@ -80,45 +80,6 @@ const Portfolio = () => {
           scrollEase={0.025}
         />
       </div>
-      {/* <ul data-aos="fade-right" data-aos-duration="1200">
-        <Slider {...settings}>
-          {portfolioData.map((item) => (
-            <li key={item.id}>
-              <div className="list_inner">
-                <div className="image">
-                  <div
-                    // onClick={() => handleModle(item?.id)}
-                    className="details"
-                  >
-                    <Image
-                      width={300}
-                      height={400}
-                      src={item.portfolioImage}
-                      data-tip
-                      data-for={item.tooltipId}
-                      alt="portfolio"
-                    />
-
-                    <ReactTooltip
-                      id={item.tooltipId}
-                      place="bottom"
-                      type="light"
-                      effect="float"
-                      className="tooltip-wrapper"
-                    >
-                      <div>
-                        <h5>{item.title}</h5>
-                        <span>{item.meta}</span>
-                      </div>
-                    </ReactTooltip>
-                  </div>
-                </div>
-              </div>
-            </li>
-          ))}
-        </Slider>
-      </ul> */}
-      {/* End ul */}
     </div>
   );
 };

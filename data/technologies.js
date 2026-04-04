@@ -43,12 +43,12 @@ module.exports = [
   {
     skill: "Machine Learning & MLOps",
     technology: "PyTorch",
-    icon: "llama.png",
+    icon: "pytorch.png",
   },
   {
     skill: "Machine Learning & MLOps",
     technology: "Tensorflow",
-    icon: "pytorch.png",
+    icon: "tensorflow.png",
   },
   {
     skill: "Machine Learning & MLOps",
@@ -112,8 +112,8 @@ module.exports = [
   { skill: "Programming Languages", technology: "C/C++", icon: "cpp.png" },
   { skill: "Programming Languages", technology: "SQL", icon: "sql.png" },
   { skill: "Programming Languages", technology: "R", icon: "r.png" },
-  { skill: "Programming Languages", technology: "HTML + CSS", icon: "r.png" },
-  { skill: "Programming Languages", technology: "JavaScript", icon: "c.png" },
+  { skill: "Programming Languages", technology: "HTML + CSS", icon: "html.png" },
+  { skill: "Programming Languages", technology: "JavaScript", icon: "javascript.png" },
   { skill: "Programming Languages", technology: "Java", icon: "java.png" },
 
   { skill: "Other Tools", technology: "Tableau", icon: "tableau.png" },
@@ -121,7 +121,7 @@ module.exports = [
   { skill: "Other Tools", technology: "Git", icon: "git.png" },
   { skill: "Other Tools", technology: "JIRA", icon: "jira.png" },
   { skill: "Other Tools", technology: "Jupyter Hub", icon: "jupyter.png" },
-  { skill: "Other Tools", technology: "Notion", icon: "jupyter.png" },
+  { skill: "Other Tools", technology: "Notion", icon: "notion.png" },
 
   { skill: "Other Tools", technology: "ArcGIS", icon: "arcgis.png" },
   { skill: "Other Tools", technology: "ServiceNow", icon: "servicenow.png" },
@@ -130,6 +130,6 @@ module.exports = [
     technology: "DBeaver",
     icon: "dbeaver.png",
   },
-  { skill: "Other Tools", technology: "Draw.io", icon: "servicenow.png" },
+  { skill: "Other Tools", technology: "Draw.io", icon: "drawio.png" },
 
 ];

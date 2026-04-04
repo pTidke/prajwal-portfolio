@@ -4,9 +4,6 @@ import Modal from "react-modal";
 import ModalSkillsContent from "./modal/ModalContent";
 import ModalEducationContent from "./ModalEdu";
 import ModalExperienceContent from "./ModalExp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
 import Image from "next/image";
 
 Modal.setAppElement("#__next");
@@ -56,55 +53,25 @@ const About = () => {
                 Hello, I&apos;m <span>Prajwal Tidke</span>
               </h3>
               <p>
-                I&apos;m a product-focused data engineer and machine learning
-                researcher with 4+ years of experience designing intelligent,
-                scalable solutions across analytics, automation, and deep
-                learning. I thrive on turning data into real-world
-                impact—whether that&apos;s optimizing pipelines, deploying models, or
-                building user-centric tools. Outside of engineering, I&apos;m
-                passionate about photography.
+                I&apos;m a Senior Data Engineer and ML researcher with 5+ years of
+                experience architecting production ETL systems processing 1 TB+ daily
+                for enterprise clients managing $550B+ in institutional assets.
+                I&apos;ve driven 50% infrastructure cost reductions, 80% faster
+                pipeline execution, and zero reporting deadline misses across 6+
+                client engagements at companies like TresVista Analytics and
+                LTIMindtree.
+              </p>
+              <p>
+                Today, I&apos;m pursuing my MS in Data Science at San Diego State
+                University (4.0 GPA), where my research spans RAG-based clinical
+                chatbots, LLM fine-tuning, and synthetic data augmentation for
+                biosignal analysis. I also build and ship full-stack AI products —
+                from a tax advisory platform with OpenAI&apos;s Assistants API to a
+                195-country AI resilience scoring system.
               </p>
             </div>
-            <div className="my_skills">
-              <div
-                className="skills-header"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  paddingBottom: "20px",
-                  gap: "10px",
-                }}
-              >
-                <h3
-                  style={{ margin: 0, display: "flex", alignItems: "center" }}
-                >
-                  <span>My Skills</span>
-                  <span
-                    className="skills-arrow"
-                    onClick={toggleModalThree}
-                    style={{
-                      color: "#34495e",
-                      fontSize: "14px",
-                      fontWeight: "lighter",
-                      marginLeft: "20px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Learn more →
-                  </span>
-                </h3>
-              </div>
+            {/* Skills section moved below */}
 
-              <div
-                className="wrapper"
-                onClick={toggleModalThree}
-                style={{ cursor: "pointer" }}
-              >
-                <div className="dodo_progress">
-                  <Skills />
-                </div>
-              </div>
-            </div>
 
             <div
               // className="row"
@@ -127,7 +94,6 @@ const About = () => {
               <button
                 type="button"
                 className="color edina_tm_button"
-                style={{ flex: 1 }}
                 onClick={toggleModalTwo}
               >
                 Education
@@ -136,7 +102,7 @@ const About = () => {
           </div>
           {/* End leftpart */}
 
-          <div className="rightpart">
+          <div className="rightpart" style={{ paddingLeft: "8rem" }}>
             <div className="image">
               <Image
                 width={445}
@@ -162,13 +128,46 @@ const About = () => {
                 data-aos-delay="300"
               >
                 <div className="info">
-                  <h3>4+ Years</h3>
-                  <span>Of Experiance</span>
+                  <h3>5+ Years</h3>
+                  <span>Of Experience</span>
                 </div>
               </div>
             </div>
           </div>
-          {/* End righttpart */}
+        </div>
+        {/* End content */}
+
+        {/* Start My Skills (Full Width) */}
+        <div
+          className="my_skills"
+          style={{
+            marginTop: "60px",
+            borderTop: "1px solid rgba(0, 0, 0, 0.05)",
+            paddingTop: "40px",
+          }}
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="100"
+        >
+          <div
+            className="skills-header"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              paddingBottom: "30px",
+              gap: "10px",
+            }}
+          >
+            <h3 style={{ margin: 0, display: "flex", alignItems: "center" }}>
+              <span>My Technical Stack</span>
+            </h3>
+          </div>
+
+          <div className="wrapper">
+            <div className="dodo_progress">
+              <Skills />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -208,7 +207,7 @@ const About = () => {
         isOpen={isModalTwoOpen}
         onRequestClose={toggleModalTwo}
         contentLabel="My dialog"
-        className="custom-modal about-popup-wrapper"
+        className="custom-modal about-popup-wrapper auto-height"
         overlayClassName="custom-overlay "
         closeTimeoutMS={500}
       >

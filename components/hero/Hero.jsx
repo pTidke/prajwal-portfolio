@@ -216,16 +216,15 @@ const Hero = () => {
             data-aos-duration="1200"
             data-aos-delay="200"
           >
-            <span className="typer-toper">
+            <span className="typer-toper" style={{ color: "#BA0C2F" }}>
               <ReactTyped
                 loop
                 typeSpeed={150}
                 backSpeed={60}
                 strings={[
-                  "Data Engineer",
-                  "ML/AI Researcher",
-                  "Student",
-                  "Photographer",
+                  "Senior Data Engineer",
+                  "AI/ML Engineer",
+                  "LLM Application Builder",
                 ]}
                 smartBackspace
                 backDelay={1}
@@ -240,9 +239,10 @@ const Hero = () => {
             data-aos-duration="1200"
             data-aos-delay="300"
           >
-            I’m a product-focused data engineer and ML researcher, crafting
-            intelligent, scalable digital solutions for 4+ years across
-            analytics, automation, and deep learning.
+            Senior Data Engineer with 5+ years architecting production ETL systems
+            processing 1 TB+ daily across AWS, Databricks, and Snowflake. Currently
+            building LLM-powered applications with RAG, fine-tuned models, and
+            real-time inference while pursuing MS in Data Science (4.0 GPA) at SDSU.
           </p>
 
           <div

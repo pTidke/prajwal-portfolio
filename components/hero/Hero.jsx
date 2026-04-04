@@ -99,7 +99,7 @@ const Hero = () => {
     if (messages.length > 0) {
       localStorage.setItem(
         "chat_history",
-        JSON.stringify(messages.map((m) => ({ role: m.role, text: m.text })))
+        JSON.stringify(messages.map((m) => ({ role: m.role, text: m.text }))),
       );
     }
   }, [messages]);
@@ -262,7 +262,7 @@ const Hero = () => {
           data-aos-duration="1200"
           data-aos-delay="500"
         >
-          <a href="/img/Prajwal_Resume_DS.pdf" download className="color">
+          <a href="/img/Prajwal_Tidke_Resume.pdf" download className="color">
             Download CV
           </a>
         </div>

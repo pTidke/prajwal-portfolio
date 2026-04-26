@@ -253,7 +253,7 @@ module.exports = [
     imgIcon: "/img/svg/traffic.svg",
     title: (
       <>
-        MyTrailer: <span style={{ color: "#BA0C2F", fontWeight: 400 }}>Traffic <br /> Risk Predictor</span>
+        TrafficSensAI: <span style={{ color: "#BA0C2F", fontWeight: 400 }}>Traffic <br /> Risk Predictor</span>
       </>
     ),
     imageCredit: (
@@ -279,7 +279,7 @@ module.exports = [
     popupImg: "/img/service/traffic.jpg",
     popupTitle: (
       <>
-        MyTrailer: <span style={{ color: "#BA0C2F", fontWeight: 400 }}>Predictive Traffic Accident Analysis Tool</span>
+        TrafficSensAI: <span style={{ color: "#BA0C2F", fontWeight: 400 }}>Predictive Traffic Accident Analysis Tool</span>
       </>
     ),
     firstDescriptionText: (
@@ -294,7 +294,7 @@ module.exports = [
       <>
         <h3>Description</h3>
         <p>
-          MyTrailer anticipates where and how severely accidents may occur,
+          TrafficSensAI anticipates where and how severely accidents may occur,
           enabling targeted interventions before incidents happen.
           Municipalities relied on historical reports, not forecasts. We built a
           predictive system with interactive geovisualization for planners and
@@ -331,6 +331,18 @@ module.exports = [
         <p>
           Supports data-driven safety campaigns, infrastructure changes, and
           prioritization of limited resources.
+        </p>
+
+        <h3>Links</h3>
+        <p>
+          Live:{" "}
+          <a
+            href="https://trafficsensai.onrender.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            trafficsensai.onrender.com
+          </a>
         </p>
       </>
     ),

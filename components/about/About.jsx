@@ -53,21 +53,16 @@ const About = () => {
                 Hello, I&apos;m <span>Prajwal Tidke</span>
               </h3>
               <p>
-                I&apos;m a Senior Data Engineer and ML researcher with 5+ years of
-                experience architecting production ETL systems processing 1 TB+ daily
-                for enterprise clients managing $550B+ in institutional assets.
-                I&apos;ve driven 50% infrastructure cost reductions, 80% faster
-                pipeline execution, and zero reporting deadline misses across 6+
-                client engagements at companies like TresVista Analytics and
-                LTIMindtree.
+                I am a data engineer who has shipped production pipelines for a $550B AUM
+                institutional client (CPPIB) and built KALM, a clinical AI system spanning
+                ingestion, RAG retrieval, and real-time crisis detection — from FastAPI backend
+                to Vercel frontend.
               </p>
               <p>
-                Today, I&apos;m pursuing my MS in Data Science at San Diego State
-                University (4.0 GPA), where my research spans RAG-based clinical
-                chatbots, LLM fine-tuning, and synthetic data augmentation for
-                biosignal analysis. I also build and ship full-stack AI products —
-                from a tax advisory platform with OpenAI&apos;s Assistants API to a
-                195-country AI resilience scoring system.
+                I work across the full data stack and am drawn to roles where robust data
+                infrastructure and applied AI intersect. Currently pursuing an MS in Big Data
+                Analytics at SDSU (4.0 GPA), I am eligible for 36 months of US work
+                authorization (STEM OPT) upon graduation.
               </p>
             </div>
             {/* Skills section moved below */}

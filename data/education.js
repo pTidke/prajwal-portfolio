@@ -1,7 +1,7 @@
 module.exports = [
   {
     year: "2024 - 2026",
-    degree: "MS in Data Science",
+    degree: "MS in Big Data Analytics",
     institute:
       "San Diego State University, US \u200B \u200B | \u200B \u200B CGPA: 4.0 / 4.0",
     coursework: [

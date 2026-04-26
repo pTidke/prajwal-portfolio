@@ -239,10 +239,7 @@ const Hero = () => {
             data-aos-duration="1200"
             data-aos-delay="300"
           >
-            Senior Data Engineer with 5+ years architecting production ETL systems
-            processing 1 TB+ daily across AWS, Databricks, and Snowflake. Currently
-            building LLM-powered applications with RAG, fine-tuned models, and
-            real-time inference while pursuing MS in Data Science (4.0 GPA) at SDSU.
+            Data engineer who has shipped production pipelines for a $550B AUM institutional client (CPPIB) and built KALM, a clinical AI system spanning ingestion, RAG retrieval, and real-time crisis detection — from FastAPI backend to Vercel frontend. I work across the full data stack and am drawn to roles where robust data infrastructure and applied AI intersect. Currently pursuing an MS in Big Data Analytics at SDSU (4.0 GPA).
           </p>
 
           <div

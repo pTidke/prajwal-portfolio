@@ -81,7 +81,7 @@ module.exports = [
     id: 4,
     title: (
       <>
-        MyTrailer: <span style={{ color: "#BA0C2F", fontWeight: 400 }}>Predictive Traffic Accident Analysis Tool</span>
+        TrafficSensAI: <span style={{ color: "#BA0C2F", fontWeight: 400 }}>Predictive Traffic Accident Analysis Tool</span>
       </>
     ),
     tagline: "Full-stack ML + geospatial platform for predictive accident severity classification and hotspot detection.",
@@ -97,7 +97,7 @@ module.exports = [
       "500K+ records",
       "87%+ accuracy",
     ],
-    viewLive: "#", // Add if available
+    viewLive: "https://trafficsensai.onrender.com/",
     viewCode: "https://github.com/pTidke/TrafficSensAI",
   },
   {

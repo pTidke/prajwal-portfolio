@@ -37,21 +37,20 @@ module.exports = [
 
         <h5>SDSU Research (KALM / KBLaM)</h5>
         <p style={{ textAlign: "justify" }}>
-          Architected <strong>KALM</strong>, a RAG-based mental health chatbot
-          for construction workers using FastAPI, GPT-4, and ChromaDB —
-          engineering a 5-stage <strong>ALGEE therapeutic framework</strong>,
-          real-time crisis detection (<strong>53 signal patterns</strong>), 4 AI
-          personas, and AES-128 encrypted storage across 1,000+ clinical
-          knowledge chunks.
+          Built <strong>KALM</strong>, a clinical mental-health chatbot (FastAPI + Azure OpenAI GPT-4.1 + ChromaDB)
+          ingesting DSM-5 and workplace safety docs via metadata-tagged chunking and topic-filtered vector retrieval;
+          deployed on Render with a Vercel frontend.
           <br />
-          Implemented <strong>KBLaM architecture</strong> — constructed 10K+
-          domain-specific knowledge-base triples, built QA evaluation datasets,
-          and fine-tuned <strong>LLaMA</strong>, achieving 12% improvement in
-          domain-specific accuracy.
+          Engineered a real-time crisis-signal interceptor and <strong>ALGEE-stage state machine</strong> across 4 AI
+          personas. Handled live crisis escalation with strict security: AES-128 encryption, JWT/Supabase auth, prompt
+          injection guards, and GDPR-compliant deletion endpoints.
           <br />
-          Engineered <strong>WGAN-based synthetic data pipeline</strong> for
-          biosignal analysis, generating 50K+ samples and reducing core-temperature
-          prediction MAE by 15% over baseline.
+          Evaluated <strong>KBLaM</strong> for clinical LLM augmentation — built 1,000+ KB triples and QA pairs;
+          pivoted to RAG after evaluation showed insufficient accuracy gains.
+          <br />
+          Built a <strong>WGAN biosignal pipeline</strong> (PyTorch + Hugging Face) generating 52K synthetic training
+          samples; holdout evaluation showed 14.7% MAE reduction over real-data-only baseline (5-fold cross-validation,
+          logged in W&B).
         </p>
 
         <h5>Impact</h5>
@@ -104,24 +103,21 @@ module.exports = [
 
         <h5>Analytics Pod (Client: CPPIB, $550B+ AUM)</h5>
         <p style={{ textAlign: "justify" }}>
-          Embedded with <strong>Canada Pension Plan Investment Board</strong> as
-          part of a 2-person analytics pod, owning the full data engineering
-          stack — from relational schema design in <strong>Databricks</strong>{" "}
-          to executive reported dashboards for senior portfolio managers.
+          Architected and managed the ETL/ELT workflow layer and dimensional schema design on a 
+          <strong> Databricks + Airflow stack</strong> for CPPIB's portfolio reporting, with outputs 
+          surfaced in Power BI & Valsys dashboards used daily by portfolio managers.
           <br />
-          Re-architected ingestion with <strong>AWS SQS/SNS</strong> into S3/PySpark
-          across <strong>1 TB+ daily data</strong>, delivering 20% faster
-          ingestion, 40% lower latency, and 15% higher reporting throughput.
+          Redesigned <strong>SQS→S3 fan-out logic</strong> and PySpark partition strategy for a 1.2 TB/day ingestion layer; 
+          Databricks job-run history showed 38% median latency drop and 19% throughput gain over a 6-week post-deploy window.
           <br />
-          Built <strong>VBA automation plugin</strong> integrating S&P Global
-          and Visible Alpha data feeds into Excel financial models, pushing
-          cleaned outputs to the Valsys database for KPI dashboard refresh —
-          reclaiming <strong>25 hrs/week</strong> and reducing manual errors by
-          70%.
+          Applied <strong>Z-ordering</strong> on 4 high-cardinality Delta tables and rewrote 11 partition-unaware queries; 
+          Databricks SQL query history showed median execution time fell from 4.2 min to 2.7 min across all dashboards (36% reduction).
           <br />
-          Standardized <strong>validation rules</strong> (row-counts, schema
-          drift, freshness) and enforced data SLAs across 3+ client workstreams,
-          achieving <strong>zero reporting deadline misses</strong>.
+          Deployed <strong>Great Expectations</strong> with pytest CI/CD gates; 91% expectation coverage across 3 workstreams. 
+          Maintained 100% SLA compliance and zero schema violations across 6 months post-launch.
+          <br />
+          Built a <strong>VBA plugin</strong> integrating S&P Global and Visible Alpha feeds directly into Excel financial models, 
+          automating workflows and eliminating manual data updates for 3 analysts; saving an estimated ~22 hours/week.
         </p>
 
         <h5>Client Engagement & Governance</h5>
@@ -189,23 +185,19 @@ module.exports = [
 
         <h5>Enterprise Data Engineering (Client: Carrier Global)</h5>
         <p style={{ textAlign: "justify" }}>
-          Led a 3-person data engineering pod delivering enterprise-scale data
-          solutions across <strong>6+ clients including Carrier Global</strong>.
-          Responsible for full delivery lifecycle — sprint planning, code
-          reviews, client QBRs, and governance audits.
+          Delivered 5 enterprise client engagements over 3 years — BFSI and manufacturing verticals — in a 
+          <strong> 3-person Agile team</strong>. Covered the full delivery lifecycle: sprint planning, 
+          code reviews, governance audits, and QBRs with client stakeholders.
           <br />
-          Spearheaded migration of legacy SAP workflows to{" "}
-          <strong>AWS Glue</strong> with <strong>Oracle-to-Snowflake</strong>{" "}
-          transfers, cutting infrastructure + licensing costs by ~
-          <strong>50%</strong>.
+          Optimized <strong>SAP BODS pipelines</strong> across SAP ECC, HANA, SQL Server, and Oracle via predicate pushdown 
+          and composite index tuning; end-of-month reporting cycles dropped from 18-24 hrs to under 3 hrs.
           <br />
-          Optimized <strong>SAP BODS ETL pipelines</strong> integrating ECC,
-          HANA, SQL Server, and Oracle, compressing reporting from days to
-          hours (<strong>80% faster execution</strong>).
+          Owned Python automation layer for 12 Oracle→Snowflake schema translations (<strong>AWS Glue</strong>); 
+          eliminated 3 manual handoffs and reduced transform runtime by 41%. Overall migration reduced client 
+          infrastructure and licensing spend by ~48%.
           <br />
-          Automated 5+ recurring data-mapping workflows, reclaiming{" "}
-          <strong>1.5 FTEs annually</strong> and maintaining continuous audit
-          readiness under enterprise governance frameworks.
+          Automated 7 recurring <strong>ELT workflows in Python</strong> (previously manual, run by 2 ops staff); 
+          time-tracking logs showed 58 hrs/month of manual effort eliminated, equivalent to 0.9 FTE annually.
         </p>
 
         <h5>Leadership & Governance</h5>

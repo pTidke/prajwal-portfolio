@@ -25,7 +25,7 @@ const Address = () => {
       info: (
         <>
           <li>
-            <a href="mailto:ib-themes21@gmail.com">ms.ptidke@gmail.com</a>
+            <a href="mailto:ptidke9@gmail.com">ptidke9@gmail.com</a>
           </li>
           <li>
             <a href="mailto:ib-themes21@gmail.com">ptidke4710@sdsu.edu</a>
@@ -42,9 +42,9 @@ const Address = () => {
         <>
           <li>
             <p>
-              6560 Montezuma Road,
+              246 Acalanes Dr,
               <br />
-              San Diego, USA
+              San Francisco Bay Area, USA
             </p>
           </li>
         </>

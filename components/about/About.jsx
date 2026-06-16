@@ -53,16 +53,13 @@ const About = () => {
                 Hello, I&apos;m <span>Prajwal Tidke</span>
               </h3>
               <p>
-                I am a data engineer who has shipped production pipelines for a $550B AUM
-                institutional client (CPPIB) and built KALM, a clinical AI system spanning
-                ingestion, RAG retrieval, and real-time crisis detection — from FastAPI backend
-                to Vercel frontend.
+                I build the production data backbone that makes AI systems work — most recently the ingestion, retrieval, and evaluation layer behind KALM, a clinical mental-health RAG system at SDSU&apos;s LINC Lab. Before that, 5+ years of data engineering across finance and manufacturing, including the end-to-end stack for a $550B+ AUM fund (CPPIB).
               </p>
               <p>
                 I work across the full data stack and am drawn to roles where robust data
-                infrastructure and applied AI intersect. Currently pursuing an MS in Big Data
-                Analytics at SDSU (4.0 GPA), I am eligible for 36 months of US work
-                authorization (STEM OPT) upon graduation.
+                infrastructure and applied AI intersect. Holding an MS in Big Data
+                Analytics from SDSU (4.0 GPA), I am eligible for 36 months of US work
+                authorization (STEM OPT).
               </p>
             </div>
             {/* Skills section moved below */}

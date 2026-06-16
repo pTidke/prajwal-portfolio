@@ -132,4 +132,20 @@ module.exports = [
   },
   { skill: "Other Tools", technology: "Draw.io", icon: "drawio.png" },
 
+  // Data engineering additions
+  { skill: "ETL Development & Automation", technology: "dbt", icon: "mlp.png" },
+  { skill: "ETL Development & Automation", technology: "Apache Kafka", icon: "mlp.png" },
+  { skill: "ETL Development & Automation", technology: "Delta Lake", icon: "mlp.png" },
+  { skill: "ETL Development & Automation", technology: "DuckDB", icon: "mlp.png" },
+  { skill: "ETL Development & Automation", technology: "Apache Flink", icon: "mlp.png" },
+  { skill: "Cloud & Data Platforms", technology: "BigQuery", icon: "mlp.png" },
+  { skill: "Cloud & Data Platforms", technology: "Terraform", icon: "mlp.png" },
+  { skill: "Cloud & Data Platforms", technology: "Kubernetes", icon: "mlp.png" },
+  // GenAI / RAG stack (kept under ML to avoid adding a new rendered category)
+  { skill: "Machine Learning & MLOps", technology: "RAG", icon: "mlp.png" },
+  { skill: "Machine Learning & MLOps", technology: "ChromaDB", icon: "mlp.png" },
+  { skill: "Machine Learning & MLOps", technology: "Azure OpenAI", icon: "mlp.png" },
+  { skill: "Machine Learning & MLOps", technology: "LangChain", icon: "mlp.png" },
+  { skill: "Machine Learning & MLOps", technology: "RAGAS", icon: "mlp.png" },
+  { skill: "Machine Learning & MLOps", technology: "FastAPI", icon: "mlp.png" },
 ];

@@ -18,6 +18,11 @@ const skillsContent = [
       "Athena",
       "Azure AI Foundry",
       "GCP",
+      "dbt",
+      "DuckDB",
+      "Apache Flink",
+      "Terraform",
+      "Kubernetes",
     ],
   },
   {
@@ -33,11 +38,15 @@ const skillsContent = [
       "FastAPI",
       "Flask",
       "Docker",
+      "Azure OpenAI",
+      "RAGAS",
+      "LangExtract",
+      "Claude Code",
     ],
   },
   {
     category: "Programming",
-    technologies: ["Python", "PySpark", "SQL", "TypeScript", "JavaScript", "React", "Next.js"],
+    technologies: ["Python", "PySpark", "SQL", "TypeScript", "JavaScript", "React", "Next.js", "Scala", "Java"],
   },
   {
     category: "Data & BI Tools",

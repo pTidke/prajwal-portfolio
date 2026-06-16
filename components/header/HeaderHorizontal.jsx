@@ -9,8 +9,8 @@ import logo2 from "../../public/img/logo/plight.png";
 // sidebar footer bottom content
 const sidebarFooterContent = {
   name: "Prajwal",
-  email: "ms.ptidke@gmail.com",
-  emailRef: "mailto:ms.ptidke@gmail.com",
+  email: "ptidke9@gmail.com",
+  emailRef: "mailto:ptidke9@gmail.com",
 };
 
 const HeaderHorizontal = () => {

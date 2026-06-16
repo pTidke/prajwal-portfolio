@@ -1,8 +1,8 @@
 module.exports = [
   {
     id: 1,
-    year: "Feb 2025 - Present",
-    position: "Research Assistant",
+    year: "Feb 2025 - May 2026",
+    position: "AI Data Engineer",
     client: "LINC Lab",
     category: "Part-Time",
     companyLogo: "/img/companies/sdsup.png",
@@ -11,7 +11,7 @@ module.exports = [
 
     title: (
       <>
-        Research Assistant
+        AI Data Engineer
         <br />
         <span style={{ fontWeight: 400, color: "#BA0C2F" }}>SDSU Research</span>
         <br />
@@ -19,7 +19,7 @@ module.exports = [
       </>
     ),
     compnayName: "SDSU Research",
-    popupTitle: "Research Assistant",
+    popupTitle: "AI Data Engineer",
     serviceListDescriptions: (
       <>
         <h5>Overview</h5>
@@ -37,6 +37,8 @@ module.exports = [
 
         <h5>SDSU Research (KALM / KBLaM)</h5>
         <p style={{ textAlign: "justify" }}>
+          Built the ingestion + retrieval layer over <strong>ChromaDB + Azure OpenAI</strong> — parsing 1.5K+ multi-format clinical docs via Google LangExtract (<strong>~15 hrs/week</strong> of annotation eliminated), cutting query latency <strong>55%</strong> (1.2s mean / 1.7s p95), and gating answer quality at <strong>0.96 faithfulness</strong> across a <strong>200-query</strong> RAGAS + LLM-as-judge harness.
+          <br />
           Built <strong>KALM</strong>, a clinical mental-health chatbot (FastAPI + Azure OpenAI GPT-4.1 + ChromaDB)
           ingesting DSM-5 and workplace safety docs via metadata-tagged chunking and topic-filtered vector retrieval;
           deployed on Render with a Vercel frontend.
@@ -68,7 +70,7 @@ module.exports = [
   {
     id: 2,
     year: "Oct 2023 - Aug 2024",
-    position: "Associate Data Engineer",
+    position: "Senior Data Engineer",
     client: "CPPIB",
     category: "Full-Time",
     companyLogo: "/img/companies/tresv.png",
@@ -77,7 +79,7 @@ module.exports = [
 
     title: (
       <>
-        Associate Data Engineer
+        Senior Data Engineer
         <br />
         <span style={{ fontWeight: 400, color: "#BA0C2F" }}>
           TresVista Analytics
@@ -87,7 +89,7 @@ module.exports = [
       </>
     ),
     compnayName: "TresVista Analytics",
-    popupTitle: "Associate Data Engineer",
+    popupTitle: "Senior Data Engineer",
     serviceListDescriptions: (
       <>
         <h5>Overview</h5>
@@ -97,7 +99,7 @@ module.exports = [
           data from mobility, app performance, and financial vendors into a
           centralized data lake. I collaborated with client teams to define
           SLAs, automate reporting workflows with Python and Power Automate, and
-          improve data ingestion latency by 50%, ensuring high reliability and
+          improve data ingestion latency by 38%, ensuring high reliability and
           faster insights across research streams.
         </p>
 
@@ -136,8 +138,7 @@ module.exports = [
 
         <h5>Impact</h5>
         <p style={{ textAlign: "justify" }}>
-          ~<strong>70%</strong> reduction in manual reporting effort; ~
-          <strong>50%</strong> faster ingestion cycles.
+          ~<strong>45%</strong> reduction in weekly manual analysis; ~<strong>38%</strong> lower ingestion latency.
           <br />
           Consistent, governed alternative-data flows enabling repeatable
           investment analysis.
@@ -179,7 +180,7 @@ module.exports = [
           developing and migrating ETL pipelines using SAP BODS and AWS Glue,
           optimizing reporting across SAP ECC, Oracle, and Snowflake. I also
           managed a small team, governed SLAs and support processes in
-          ServiceNow, and delivered 50% cost savings and faster reporting
+          ServiceNow, and delivered ~$650K (65%) in annual cost savings and faster reporting
           through cloud-native solutions.
         </p>
 
@@ -193,8 +194,7 @@ module.exports = [
           and composite index tuning; end-of-month reporting cycles dropped from 18-24 hrs to under 3 hrs.
           <br />
           Owned Python automation layer for 12 Oracle→Snowflake schema translations (<strong>AWS Glue</strong>); 
-          eliminated 3 manual handoffs and reduced transform runtime by 41%. Overall migration reduced client 
-          infrastructure and licensing spend by ~48%.
+          eliminated 3 manual handoffs and reduced transform runtime by 41%. Overall migration saved ~$650K (65%) in annual operating costs.
           <br />
           Automated 7 recurring <strong>ELT workflows in Python</strong> (previously manual, run by 2 ops staff); 
           time-tracking logs showed 58 hrs/month of manual effort eliminated, equivalent to 0.9 FTE annually.

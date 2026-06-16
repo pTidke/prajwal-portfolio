@@ -4,9 +4,8 @@ module.exports = [
   { meta: "Age", metaInfo: "26 Years" },
   { meta: "Nationality", metaInfo: "India" },
   { meta: "Open to Work", metaInfo: "Yes" },
-  { meta: "Address", metaInfo: "San Diego" },
+  { meta: "Address", metaInfo: "San Francisco Bay Area" },
   { meta: "phone", metaInfo: "+16195209475" },
-  { meta: "Email", metaInfo: "ms.ptidke@gmail.com" },
-  { meta: "Skype", metaInfo: " rokers.nelson" },
+  { meta: "Email", metaInfo: "ptidke9@gmail.com" },
   { meta: "languages", metaInfo: "English, Hindi" },
 ];

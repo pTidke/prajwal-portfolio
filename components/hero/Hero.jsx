@@ -222,9 +222,9 @@ const Hero = () => {
                 typeSpeed={150}
                 backSpeed={60}
                 strings={[
-                  "Senior Data Engineer",
-                  "AI/ML Engineer",
-                  "LLM Application Builder",
+                  "Data & AI Engineer",
+                  "RAG Systems Builder",
+                  "Data Platform Engineer",
                 ]}
                 smartBackspace
                 backDelay={1}
@@ -239,7 +239,7 @@ const Hero = () => {
             data-aos-duration="1200"
             data-aos-delay="300"
           >
-            Data engineer who has shipped production pipelines for a $550B AUM institutional client (CPPIB) and built KALM, a clinical AI system spanning ingestion, RAG retrieval, and real-time crisis detection — from FastAPI backend to Vercel frontend. I work across the full data stack and am drawn to roles where robust data infrastructure and applied AI intersect. Currently pursuing an MS in Big Data Analytics at SDSU (4.0 GPA).
+            Data engineer shipping production pipelines for a $550B+ AUM client and building end-to-end clinical AI systems like KALM. I work across the full stack, bridging robust data infrastructure with applied AI.
           </p>
 
           <div
